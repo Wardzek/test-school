@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block main %}
+    <section class="vh-100 align-middle">
+        <!-- New member form -->
+        <h2>Ajouter un(e) Argonaute</h2>
+        <div class="new-member-form">
+            {{ form(form) }}
+        </div>
+
+        <!-- Member list -->
+        <!-- Affichage de nos données via une boucle for -->
+        <h2>Membres de l'équipage</h2>
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center">
+                {% for arg in args %}
+                    <div class="col-4">
+                        {{ arg.name }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
