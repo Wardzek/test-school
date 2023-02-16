@@ -20,7 +20,11 @@ class ArgonauteType extends AbstractType
                     'placeholder' => 'Charalampos'
                 ]
             ])
-            ->add('Envoyer', SubmitType::class)
+            ->add('Envoyer', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-dark'
+                ]
+            ])
         ;
     }
 
